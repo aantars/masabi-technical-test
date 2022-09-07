@@ -20,4 +20,13 @@ public class MeanAverageCalculatorAcceptanceTest {
 
 		assertThat(systemOutRule.getLog().trim()).isEqualTo("The mean is 3.2");
 	}
+
+	@Test
+	public void calculates_the_correct_mean_average_when_provided_list_is_empty() {
+		List<Integer> inputNumbers = List.of();
+
+		AverageCalculator.printAverage(inputNumbers);
+
+		assertThat(systemOutRule.getLog().trim()).isEqualTo("The mean is 0.0");
+	}
 }
