@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompileOnly 'junit:junit:4.13.2'
+    testImplementation(
+        'org.junit.jupiter:junit-jupiter:5.9.0',
+    	'org.junit.vintage:junit-vintage-engine',
+        'org.hamcrest:hamcrest:2.2',
+        'org.assertj:assertj-core:3.23.1',
+        'com.github.stefanbirkner:system-rules:1.19.0'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = '11'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

@@ -1,0 +1,11 @@
+plugins {
+    id 'idea'
+}
+
+subprojects {
+    apply plugin: 'idea'
+
+    repositories {
+        mavenCentral()
+    }
+}

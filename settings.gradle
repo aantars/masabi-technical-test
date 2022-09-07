@@ -1,0 +1,4 @@
+rootProject.name = 'masabi-java-technical-test'
+
+include 'java'
+include 'kotlin'

@@ -1,0 +1,11 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.7.10"
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation(
+        'org.assertj:assertj-core:3.23.1',
+        'com.github.stefanbirkner:system-rules:1.19.0'
+    )
+}
